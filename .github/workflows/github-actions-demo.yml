@@ -1,5 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+runs-on: farts
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -20,5 +21,6 @@ jobs:
         run: |
           env
       - name: Step Summary
+
         run: |
           cat $GITHUB_STEP_SUMMARY
