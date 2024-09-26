@@ -19,3 +19,6 @@ jobs:
       - name: Get Env
         run: |
           env
+      - name: Step Summary:
+        run: |
+          cat $GITHUB_STEP_SUMMARY
