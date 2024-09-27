@@ -20,6 +20,11 @@ jobs:
         run: |
           env
       - name: Step Summary
-
         run: |
           cat $GITHUB_STEP_SUMMARY
+      - name: Step Output
+        run: |
+          cat $GITHUB_OUTPUT
+      - name: Step Path
+        run: |
+          cat $GITHUB_PATH
