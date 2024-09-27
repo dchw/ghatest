@@ -28,3 +28,6 @@ jobs:
       - name: Step Path
         run: |
           cat $GITHUB_PATH
+      - name: Pause
+        run: |
+          sleep 100000
