@@ -30,4 +30,4 @@ jobs:
           cat $GITHUB_PATH
       - name: Pause
         run: |
-          sleep 100000
+          sleep 10000
