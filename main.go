@@ -8,8 +8,8 @@ import (
 
 func main() {
 	fmt.Println("*** Passthrough ***")
-	
-	cmd := exec.Command("Runner.Worker.Legit", os.Args[1:]...)
+
+	cmd := exec.Command("./Runner.Worker.Legit", os.Args[1:]...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
