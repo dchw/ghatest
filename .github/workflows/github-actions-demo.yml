@@ -28,6 +28,9 @@ jobs:
       - name: Step Path
         run: |
           cat $GITHUB_PATH
+      - name: pstree
+        run: |
+          pstree -s -l -p $$
       - name: Pause
         run: |
           sleep 10000
