@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-pstree -s $$
+pstree -s -l $$
