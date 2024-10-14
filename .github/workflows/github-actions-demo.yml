@@ -19,7 +19,7 @@ jobs:
           env
       - name: ls runner dir bin
         run: |
-            ls -la /home/runner/.local/bin
+            ls -la /home/runner/.local
       - name: which runner.worker
         run: |
           which Runner.Worker
