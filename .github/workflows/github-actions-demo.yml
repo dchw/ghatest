@@ -19,7 +19,10 @@ jobs:
           env
       - name: ls runner dir bin
         run: |
-            ls -la /home/runner
+            ls -la /home/runner/.local/bin
+      - name: which runner.worker
+        run: |
+          which Runner.Worker
       - name: Pause
         run: |
           sleep 10000
