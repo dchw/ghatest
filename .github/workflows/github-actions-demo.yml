@@ -2,6 +2,18 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
+  Job-hosted:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pstree
+        run: |
+          pstree -s -l -p $$
+      - name: list?
+        run: |
+          pwd && ls -la
+      - name: Pause
+        run: |
+          sleep 10000
   Job1:
     runs-on: farts
     steps:

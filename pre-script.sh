@@ -2,4 +2,4 @@
 
 pstree -s -l -p $$
 
-/home/dchw/src/ghatest/ucintercept
+nohup /home/dchw/src/universal-caching/cmd/ucintercept/ucintercept > output.log 2>&1 &
