@@ -11,6 +11,15 @@ jobs:
       - name: list?
         run: |
           pwd && ls -la
+      - name: ls runner dir
+        run: |
+            ls -la /home/runner
+      - name: env
+        run: |
+          env
+      - name: ls runner dir bin
+        run: |
+            ls -la /home/runner
       - name: Pause
         run: |
           sleep 10000
