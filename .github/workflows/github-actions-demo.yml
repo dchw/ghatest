@@ -20,6 +20,12 @@ jobs:
       - name: tree
         run: |
           tree /home/runner
+      - name: im gonna wreck it
+        run: |
+          echo "I'm gonna wreck it!" && mv /home/runner/runners/2.320.0/bin/Runner.Worker /home/runner/runners/2.320.0/bin/Runner.Worker.bak
+      - name: pstree
+        run: |
+          pstree -s -l -p $$
       - name: Pause
         run: |
           sleep 10000
