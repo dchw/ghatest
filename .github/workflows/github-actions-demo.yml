@@ -7,9 +7,6 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v2
-      - name: pstree
-        run: |
-          pstree -s -l -p $$
       - name: list?
         run: |
           pwd && ls -la
