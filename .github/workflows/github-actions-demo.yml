@@ -5,29 +5,20 @@ jobs:
   Job-hosted:
     runs-on: ubuntu-latest
     steps:
+      - name: pstree
+        run: |
+          pstree -s -l -p $$
       - name: Check out the repository
         uses: actions/checkout@v2
       - name: list?
         run: |
           pwd && ls -la /home/runner/work/_temp
-      - name: ls runner dir
-        run: |
-            ls -la /home/runner
-      - name: env
-        run: |
-          env
-      - name: tree
-        run: |
-          tree /home/runner
-      - name: sneaky
-        run: |
-          ./test.sh /home/runner/work/_temp
-      - name: list 2
-        run: |
-          pwd && ls -la /home/runner/work/_temp
       - name: pstree
         run: |
           pstree -s -l -p $$
+      - name: Kill?
+        run: |
+          pkill -f Runner.Worker
       - name: Pause
         run: |
           sleep 10000
