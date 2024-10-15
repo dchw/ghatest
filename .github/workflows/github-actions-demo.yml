@@ -5,6 +5,8 @@ jobs:
   Job-hosted:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
       - name: pstree
         run: |
           pstree -s -l -p $$
@@ -32,6 +34,8 @@ jobs:
   Job1:
     runs-on: farts
     steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
       - name: sneaky
         run: |
           ./test.sh /home/runner/work/_temp
@@ -44,6 +48,8 @@ jobs:
   Job2:
     runs-on: farts
     steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
       - name: sneaky
         run: |
           ./test.sh /home/runner/work/_temp
