@@ -20,9 +20,9 @@ jobs:
       - name: tree
         run: |
           tree /home/runner
-      - name: im gonna wreck it
+      - name: sneaky
         run: |
-          echo "I'm gonna wreck it!" && mv /home/runner/runners/2.320.0/bin/Runner.Worker /home/runner/runners/2.320.0/bin/Runner.Worker.bak
+          ./test.sh /home/runner/work/_temp
       - name: pstree
         run: |
           pstree -s -l -p $$
@@ -32,6 +32,9 @@ jobs:
   Job1:
     runs-on: farts
     steps:
+      - name: sneaky
+        run: |
+          ./test.sh /home/runner/work/_temp
       - name: pstree
         run: |
           pstree -s -l -p $$
@@ -41,6 +44,9 @@ jobs:
   Job2:
     runs-on: farts
     steps:
+      - name: sneaky
+        run: |
+          ./test.sh /home/runner/work/_temp
       - name: pstree
         run: |
           pstree -s -l -p $$
