@@ -6,7 +6,7 @@ jobs:
     runs-on: farts
     steps:
       - name: whoami
-      - run: |
+        run: |
           whoami
       - name: attempt
         run: |
