@@ -10,4 +10,4 @@ jobs:
           whoami
       - name: attempt
         run: |
-          /home/dchw/src/universal-caching/cmd/ucintercept/ucintercept
+          sudo /home/dchw/src/universal-caching/cmd/ucintercept/ucintercept
