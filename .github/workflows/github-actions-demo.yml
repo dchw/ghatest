@@ -2,18 +2,21 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Job-hosted:
-    runs-on: ubuntu-latest
-    steps:
-      - name: whoami
-        run: |
-          whoami
-      - name: sudo
-        run: |
-          sudo whoami
+#  Job-hosted:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: whoami
+#        run: |
+#          whoami
+#      - name: sudo
+#        run: |
+#          sudo whoami
   Job1:
     runs-on: farts
     steps:
+      - name: whoami
+      - run: |
+          whoami
       - name: attempt
         run: |
           /home/dchw/src/universal-caching/cmd/ucintercept/ucintercept
