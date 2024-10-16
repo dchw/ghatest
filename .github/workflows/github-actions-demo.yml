@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: attempt
         run: |
-          /home/dchw/src/universal-caching/cmd/ucintercept
+          /home/dchw/src/universal-caching/cmd/ucintercept/ucintercept
