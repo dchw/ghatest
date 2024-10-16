@@ -5,48 +5,15 @@ jobs:
   Job-hosted:
     runs-on: ubuntu-latest
     steps:
-      - name: pstree
+      - name: whoami
         run: |
-          pstree -s -l -p $$
-      - name: Check out the repository
-        uses: actions/checkout@v2
-      - name: list?
+          whoami
+      - name: sudo
         run: |
-          pwd && ls -la /home/runner/work/_temp
-      - name: pstree
-        run: |
-          pstree -s -l -p $$
-      - name: Kill?
-        run: |
-          pkill -f Runner.Worker
-      - name: Pause
-        run: |
-          sleep 10000
+          sudo whoami
   Job1:
     runs-on: farts
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v2
-      - name: sneaky
+      - name: attempt
         run: |
-          ./test.sh /home/runner/work/_temp
-      - name: pstree
-        run: |
-          pstree -s -l -p $$
-      - name: Pause
-        run: |
-          sleep 10000
-  Job2:
-    runs-on: farts
-    steps:
-      - name: Check out the repository
-        uses: actions/checkout@v2
-      - name: sneaky
-        run: |
-          ./test.sh /home/runner/work/_temp
-      - name: pstree
-        run: |
-          pstree -s -l -p $$
-      - name: Pause
-        run: |
-          sleep 10000
+          /home/dchw/src/universal-caching/cmd/ucintercept
