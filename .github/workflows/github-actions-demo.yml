@@ -8,6 +8,9 @@ jobs:
       - name: whoami
         run: |
           whoami
-      - name: attempt
+      - name: env
         run: |
-          sudo /home/dchw/src/universal-caching/cmd/ucintercept/ucintercept
+          env
+      - name: sleep
+        run: |
+          sleep 10000
