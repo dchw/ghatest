@@ -13,4 +13,4 @@ jobs:
           env
       - name: sleep
         run: |
-          sleep 1
+          sleep 10000
